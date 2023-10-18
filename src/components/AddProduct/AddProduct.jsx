@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 
 const AddProduct = () => {
     const handleAddProduct = event => {
