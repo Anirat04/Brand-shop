@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const BrandsCard = () => {
 
@@ -10,8 +11,8 @@ const BrandsCard = () => {
             .then(data => setBrandsData(data))
     }, [])
     // console.log(brandsData)
-    const getMap = brandsData?.map(brand => console.log(brand))
-    console.log(getMap)
+    // const getMap = brandsData?.map(brand => console.log(brand))
+    // console.log(getMap)
 
     // const gradientBackground = {
     //     background: 'rgb(103,98,186)',
@@ -37,7 +38,9 @@ const BrandsCard = () => {
                                     <div className="text-center py-[20px]">
                                         <h2 className="text-3xl font-bold tracki">{data.brandName}</h2>
                                     </div>
-                                    <button type="button" className="max-w-[250px] mx-auto p-3 font-semibold rounded-md bg-[#2b87ff] hover:bg-white hover:border-[#2b87ff] hover:border-x-2 hover:border-y-2 text-white hover:text-[#2b87ff]">See All products of {data.brandName}</button>
+                                    <Link to={`/brand-products/${data.brandName}`} className="max-w-[250px] mx-auto">
+                                        <button type="button" className=" p-3 font-semibold rounded-md bg-[#2b87ff] hover:bg-white hover:border-[#2b87ff] hover:border-x-2 hover:border-y-2 text-white hover:text-[#2b87ff]">See All products of {data.brandName}</button>
+                                    </Link>
                                 </div>
                             </div>
                         ))
