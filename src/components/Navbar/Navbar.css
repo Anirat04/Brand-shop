@@ -1,0 +1,9 @@
+.navHoverClass:hover{
+    color: #2b87ff;
+}
+
+.nav-active .active{
+    color: #2b87ff;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
