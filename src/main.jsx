@@ -10,6 +10,8 @@ import Home from './components/Home/Home.jsx';
 import Root from './Layout/Root.jsx';
 import AddProduct from './components/AddProduct/AddProduct.jsx';
 import BrandProducts from './components/Brand-products/BrandProducts.jsx';
+import Details from './components/Details/Details.jsx';
+import UpdateProduct from './components/UpdateProduct/UpdateProduct.jsx';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +30,15 @@ const router = createBrowserRouter([
         path: "/brand-products/:brand",
         element: <BrandProducts></BrandProducts>,
         loader: () => fetch('http://localhost:5000/brand-products')
+      },
+      {
+        path: "/brand-products/:brand/product-details",
+        element: <Details></Details>
+      },
+      {
+        path: "/brand-products/:brand/update-product/:id",
+        element: <UpdateProduct></UpdateProduct>,
+        loader: ({params}) => fetch(`http://localhost:5000/brand-products/${params.id}`)
       }
     ]
   },

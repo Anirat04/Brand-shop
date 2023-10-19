@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useEffect, useState } from "react";
 import { Link, useLoaderData, useParams } from "react-router-dom";
 
@@ -25,15 +26,8 @@ const BrandProducts = () => {
         setBrandsData(takeName);
     }, [takeBrandData]); // Add takeBrandData as a dependency
     const brandCards = brandData?.filter(brands => brands.brand.toLowerCase() == currentBrand.brand.toLowerCase())
-    // console.log(takeBrandData)
-    // console.log(brandData);
-    console.log(brandCards)
-    // if(brandCards.length == 0){
-    //     console.log('No products available')
-    // }
-    const checkLength = brandCards.length;
-    // console.log(currentBrand.brand);
 
+    const checkLength = brandCards.length;
     return (
         <div>
             {
@@ -45,42 +39,58 @@ const BrandProducts = () => {
                 </>
                     : <h1>No Products Available</h1>
             }
-            <div className="card-container max-w-[900px] mx-auto">
+            <div className="card-container max-w-[1300px] grid grid-cols-4 justify-items-center gap-[10px] mx-auto">
                 {
                     brandCards?.map(data => (
-                        <div key={data._id} className="flex p-[20px] bg-white border rounded mb-[20px]">
+                        <div key={data._id} className="flex shadow-lg rounded-[10px] w-[300px] max-w-[300px] flex-col bg-white border mb-[20px]">
                             <div className=" ">
-                                <img className="max-w-[200px] rounded-lg" src="https://i.imgur.com/QpjAiHq.jpg" />
+                                <img className="min-w-full max-h-[250px] rounded-t-[10px] " src="https://i.imgur.com/QpjAiHq.jpg" />
                             </div>
-                            <div className="min-w-[500px] ml-5">
-                                <h5 className="text-[26px] font-bold mb-3">Quant olap shirts</h5>
-                                <div className="text-gray-700 ">
-                                    <p className="bg-slate-200 rounded-lg px-5 inline-block mb-3">Type: kdfeih</p>
-                                    <br />
-                                    <p className="bg-slate-200 rounded-lg px-5 inline-block">Brand: kdfeih</p>
+                            <div className="p-5">
+                                <div className="flex justify-between flex-row align-items-center">
+                                    <h4 className="text-[26px]">$13.99</h4>
+                                    <div className="rating mt-[8px] max-w-[75px]">
+                                        {Array.from({ length: data.ratings }, (_, index) => (
+                                            <input
+                                                key={index}
+                                                type="radio"
+                                                name="rating-2"
+                                                className="mask mask-star-2 bg-orange-400"
+                                                disabled
+                                            />
+                                        ))}
+
+                                        {/* Empty stars */}
+                                        {Array.from({ length: Math.max(0, 5 - data.ratings) }, (_, index) => (
+                                            <input
+                                                key={`empty-${index}`}
+                                                type="radio"
+                                                name="rating-2"
+                                                className="mask mask-star-2 bg-gray-300" 
+                                                disabled
+                                            />
+                                        ))}
+                                    </div>
                                 </div>
-                                <div className="flex items-center space-x-2 text-yellow-500 mt-3">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-4 h-4 fill-current">
-                                        <path d="M494,198.671a40.536,40.536,0,0,0-32.174-27.592L345.917,152.242,292.185,47.828a40.7,40.7,0,0,0-72.37,0L166.083,152.242,50.176,171.079a40.7,40.7,0,0,0-22.364,68.827l82.7,83.368-17.9,116.055a40.672,40.672,0,0,0,58.548,42.538L256,428.977l104.843,52.89a40.69,40.69,0,0,0,58.548-42.538l-17.9-116.055,82.7-83.368A40.538,40.538,0,0,0,494,198.671Zm-32.53,18.7L367.4,312.2l20.364,132.01a8.671,8.671,0,0,1-12.509,9.088L256,393.136,136.744,453.3a8.671,8.671,0,0,1-12.509-9.088L144.6,312.2,50.531,217.37a8.7,8.7,0,0,1,4.778-14.706L187.15,181.238,248.269,62.471a8.694,8.694,0,0,1,15.462,0L324.85,181.238l131.841,21.426A8.7,8.7,0,0,1,461.469,217.37Z"></path>
-                                    </svg>
-                                    <span className="text-[16px] font-bold">4.5</span>
-                                </div>
+                                <h5 className="text-[26px] font-bold">Quant olap shirts</h5>
+
                                 <div className="max-w-[400px]">
-                                    <p className="truncate">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                                    <p className="truncate text-[20px]">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
                                 </div>
 
-                            </div>
-                            <div className="align-items-center align-content-center col-md-3 border-left mt-1">
-                                <div className="d-flex flex-row align-items-center">
-                                    <h4 className="text-[26px]">$13.99</h4>
+                                <div className="text-gray-600 flex gap-3">
+                                    <p className="rounded-lg bg-slate-300 px-[5px] inline-block">Type: kdfeih</p>
+                                    <p>||</p>
+                                    <p className="rounded-lg bg-slate-300 px-[5px] inline-block">Brand: kdfeih</p>
                                 </div>
-                                <h6 className="text-success mb-[40px]">Free shipping</h6>
-                                <div className="d-flex flex-column mt-4">
-                                    <Link to={`#`} className="max-w-[250px] mx-auto ">
-                                        <button type="button" className="min-w-[120px] mb-[15px] py-[5px] font-semibold rounded-md bg-[#2b87ff] hover:bg-white hover:border-[#2b87ff] hover:border-x-2 hover:border-y-2 text-white hover:text-[#2b87ff]">Details</button>
+                            </div>
+                            <div className="align-items-center align-content-center col-md-3 border-left px-5 pb-5">
+                                <div className="flex flex-col">
+                                    <Link to={`#`} className="min-w-full mx-auto ">
+                                        <button type="button" className="min-w-full mb-[15px] py-[5px] font-semibold rounded-md bg-[#2b87ff] hover:bg-white hover:border-[#2b87ff] hover:border-x-2 hover:border-y-2 text-white hover:text-[#2b87ff]">Details</button>
                                     </Link>
-                                    <Link to={`#`} className="max-w-[250px] mx-auto">
-                                        <button type="button" className="min-w-[120px] py-[5px] font-semibold rounded-md bg-[#2b87ff] hover:bg-white hover:border-[#2b87ff] hover:border-x-2 hover:border-y-2 text-white hover:text-[#2b87ff]">Update</button>
+                                    <Link to={`/brand-products/:brand/update-product/${data._id}`} className="min-w-full mx-auto">
+                                        <button type="button" className="min-w-full py-[5px] font-semibold rounded-md bg-[#2b87ff] hover:bg-white hover:border-[#2b87ff] hover:border-x-2 hover:border-y-2 text-white hover:text-[#2b87ff]">Update</button>
                                     </Link>
                                 </div>
                             </div>
