@@ -86,10 +86,10 @@ const BrandProducts = () => {
                             </div>
                             <div className="align-items-center align-content-center col-md-3 border-left px-5 pb-5">
                                 <div className="flex flex-col">
-                                    <Link to={`#`} className="min-w-full mx-auto ">
+                                    <Link to={`/brand-products/${data.brand}/product-details/${data._id}`} className="min-w-full mx-auto ">
                                         <button type="button" className="min-w-full mb-[15px] py-[5px] font-semibold rounded-md bg-[#2b87ff] hover:bg-white hover:border-[#2b87ff] hover:border-x-2 hover:border-y-2 text-white hover:text-[#2b87ff]">Details</button>
                                     </Link>
-                                    <Link to={`/brand-products/:brand/update-product/${data._id}`} className="min-w-full mx-auto">
+                                    <Link to={`/brand-products/${data.brand}/update-product/${data._id}`} className="min-w-full mx-auto">
                                         <button type="button" className="min-w-full py-[5px] font-semibold rounded-md bg-[#2b87ff] hover:bg-white hover:border-[#2b87ff] hover:border-x-2 hover:border-y-2 text-white hover:text-[#2b87ff]">Update</button>
                                     </Link>
                                 </div>

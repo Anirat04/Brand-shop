@@ -12,6 +12,7 @@ import AddProduct from './components/AddProduct/AddProduct.jsx';
 import BrandProducts from './components/Brand-products/BrandProducts.jsx';
 import Details from './components/Details/Details.jsx';
 import UpdateProduct from './components/UpdateProduct/UpdateProduct.jsx';
+import MyCart from './components/MyCart/MyCart.jsx';
 
 const router = createBrowserRouter([
   {
@@ -32,13 +33,19 @@ const router = createBrowserRouter([
         loader: () => fetch('http://localhost:5000/brand-products')
       },
       {
-        path: "/brand-products/:brand/product-details",
-        element: <Details></Details>
+        path: "/brand-products/:brand/product-details/:id",
+        element: <Details></Details>,
+        loader: ({params}) => fetch(`http://localhost:5000/brand-products/${params.id}`)
       },
       {
         path: "/brand-products/:brand/update-product/:id",
         element: <UpdateProduct></UpdateProduct>,
         loader: ({params}) => fetch(`http://localhost:5000/brand-products/${params.id}`)
+      },
+      {
+        path: "/mycarts",
+        element: <MyCart></MyCart>,
+        loader: () => fetch(`http://localhost:5000/carts`)
       }
     ]
   },

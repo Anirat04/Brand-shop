@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useLoaderData } from "react-router-dom";
 
 const UpdateProduct = () => {

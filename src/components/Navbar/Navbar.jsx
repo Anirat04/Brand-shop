@@ -4,7 +4,7 @@ import './Navbar.css';
 const navLinks = <>
     <NavLink className="navHoverClass" to="/">Home</NavLink>
     <NavLink className="navHoverClass" to="/addProduct">Add Product</NavLink>
-    <NavLink className="navHoverClass" to="/contact">My Cart</NavLink>
+    <NavLink className="navHoverClass" to="/mycarts">My Cart</NavLink>
 </>
 
 
