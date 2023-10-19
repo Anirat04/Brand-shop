@@ -48,7 +48,7 @@ const BrandProducts = () => {
                             </div>
                             <div className="p-5">
                                 <div className="flex justify-between flex-row align-items-center">
-                                    <h4 className="text-[26px]">$13.99</h4>
+                                    <h4 className="text-[26px]">${data.price}</h4>
                                     <div className="rating mt-[8px] max-w-[75px]">
                                         {Array.from({ length: data.ratings }, (_, index) => (
                                             <input
@@ -72,16 +72,16 @@ const BrandProducts = () => {
                                         ))}
                                     </div>
                                 </div>
-                                <h5 className="text-[26px] font-bold">Quant olap shirts</h5>
+                                <h5 className="text-[26px] font-bold">{data.productName}</h5>
 
                                 <div className="max-w-[400px]">
-                                    <p className="truncate text-[20px]">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                                    <p className="truncate text-[20px]">{data.description}</p>
                                 </div>
 
                                 <div className="text-gray-600 flex gap-3">
-                                    <p className="rounded-lg bg-slate-300 px-[5px] inline-block">Type: kdfeih</p>
+                                    <p className="rounded-lg bg-slate-300 px-[5px] inline-block">Type: {data.productType}</p>
                                     <p>||</p>
-                                    <p className="rounded-lg bg-slate-300 px-[5px] inline-block">Brand: kdfeih</p>
+                                    <p className="rounded-lg bg-slate-300 px-[5px] inline-block uppercase">Brand: {data.brand}</p>
                                 </div>
                             </div>
                             <div className="align-items-center align-content-center col-md-3 border-left px-5 pb-5">

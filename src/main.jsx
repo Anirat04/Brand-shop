@@ -13,6 +13,9 @@ import BrandProducts from './components/Brand-products/BrandProducts.jsx';
 import Details from './components/Details/Details.jsx';
 import UpdateProduct from './components/UpdateProduct/UpdateProduct.jsx';
 import MyCart from './components/MyCart/MyCart.jsx';
+import Login from './components/Login/Login.jsx';
+import Register from './components/Register/Register.jsx';
+import Provider from './provider/provider.jsx';
 
 const router = createBrowserRouter([
   {
@@ -35,17 +38,25 @@ const router = createBrowserRouter([
       {
         path: "/brand-products/:brand/product-details/:id",
         element: <Details></Details>,
-        loader: ({params}) => fetch(`http://localhost:5000/brand-products/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/brand-products/${params.id}`)
       },
       {
         path: "/brand-products/:brand/update-product/:id",
         element: <UpdateProduct></UpdateProduct>,
-        loader: ({params}) => fetch(`http://localhost:5000/brand-products/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/brand-products/${params.id}`)
       },
       {
         path: "/mycarts",
         element: <MyCart></MyCart>,
         loader: () => fetch(`http://localhost:5000/carts`)
+      },
+      {
+        path: "/login",
+        element: <Login></Login>
+      },
+      {
+        path: "/register",
+        element: <Register></Register>
       }
     ]
   },
@@ -53,6 +64,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Provider>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>,
 )
