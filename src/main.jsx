@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
+// import App from './App.jsx'
 import './index.css'
 import {
   createBrowserRouter,
@@ -17,6 +17,7 @@ import Login from './components/Login/Login.jsx';
 import Register from './components/Register/Register.jsx';
 import Provider from './provider/provider.jsx';
 import PrivateRoute from './PrivateRoute/PrivateRoute.jsx';
+import Error from './components/Error/Error.jsx';
 
 const router = createBrowserRouter([
   {
@@ -35,25 +36,25 @@ const router = createBrowserRouter([
       {
         path: "/brand-products/:brand",
         element: <BrandProducts></BrandProducts>,
-        loader: () => fetch('http://localhost:5000/brand-products')
+        loader: () => fetch('https://a-10-sell-shop-server.vercel.app/brand-products')
       },
       {
         path: "/brand-products/:brand/product-details/:id",
         element: <PrivateRoute><Details></Details></PrivateRoute>,
         // element: <Details></Details>,
-        loader: ({ params }) => fetch(`http://localhost:5000/brand-products/${params.id}`)
+        loader: ({ params }) => fetch(`https://a-10-sell-shop-server.vercel.app/brand-products/${params.id}`)
       },
       {
         path: "/brand-products/:brand/update-product/:id",
         element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
         // element: <UpdateProduct></UpdateProduct>,
-        loader: ({ params }) => fetch(`http://localhost:5000/brand-products/${params.id}`)
+        loader: ({ params }) => fetch(`https://a-10-sell-shop-server.vercel.app/brand-products/${params.id}`)
       },
       {
         path: "/mycarts",
         element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
         // element: <MyCart></MyCart>,
-        loader: () => fetch(`http://localhost:5000/carts`)
+        loader: () => fetch(`https://a-10-sell-shop-server.vercel.app/carts`)
       },
       {
         path: "/login",
@@ -65,6 +66,10 @@ const router = createBrowserRouter([
       }
     ]
   },
+  {
+    path: '*',
+    element: <Error></Error>
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

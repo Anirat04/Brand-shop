@@ -1,0 +1,280 @@
+// [
+//     {
+//         "_id": {
+//             "$oid": "653285c234769ca5b793aebc"
+//         },
+//         "productImg": "https://i.ibb.co/vLR8x7q/nike-shoe.jpg",
+//         "productName": "Air Max 2023",
+//         "brand": "Nike",
+//         "ratings": "4",
+//         "price": "199.99",
+//         "productType": "Shoe",
+//         "description": "Step into the future with the Nike Air Max 2023. These cutting-edge shoes combine style and performance seamlessly. The breathable mesh upper ensures optimal ventilation, while the Air Max cushioning provides maximum comfort and support with every step. The iconic Nike swoosh adds a touch of classic flair to these modern kicks. Whether you're hitting the gym or strolling the streets, the Air Max 2023 is your go-to choice for style and comfort. Elevate your shoe game with the latest innovation from Nike."
+//     },
+//     {
+//         "_id": {
+//             "$oid": "653285c234769ca5b793aebd"
+//         },
+//         "productImg": "https://i.ibb.co/Dg0b7J8/dunk-low-womens-shoes-h-LKTKG.jpg",
+//         "productName": "React Run Pro",
+//         "brand": "Nike",
+//         "ratings": "5",
+//         "price": "249.99",
+//         "productType": "Shoe",
+//         "description": "Introducing the Nike React Run Pro – the epitome of performance and style. These Nike shoes are designed to take your running experience to the next level. The React foam midsole provides a responsive and cushioned ride, absorbing impact and returning energy with every stride. The lightweight and breathable upper ensures a comfortable fit, while the sleek design adds a touch of sophistication. Lace up the React Run Pro and experience the perfect blend of technology and fashion, crafted for the modern runner who demands the best in both function and aesthetics."
+//     },
+//     {
+//         "_id": {
+//             "$oid": "653285c234769ca5b793aebe"
+//         },
+//         "productImg": "https://i.ibb.co/CQ90VW6/dunk-high-retro-mens-shoe-d-TVTCk.jpg",
+//         "productName": "Free Flex 2023",
+//         "brand": "Nike",
+//         "ratings": "4",
+//         "price": "179.99",
+//         "productType": "Shoe",
+//         "description": "Unleash your potential with the Nike Free Flex 2023. These revolutionary shoes redefine flexibility and comfort. The Free Flex technology allows your foot to move naturally, providing a barefoot-like feel while still offering support and protection. The lightweight design and breathable upper make them ideal for all-day wear, whether you're hitting the gym or exploring the city. With a sleek and modern look, the Free Flex 2023 is not just a shoe; it's a statement of freedom and agility for the active individual who seeks innovation in every step."
+//     },
+//     {
+//         "_id": {
+//             "$oid": "653285c234769ca5b793aebf"
+//         },
+//         "productImg": "https://i.ibb.co/xDzfDFK/dunk-low-retro-mens-shoes-M0t9-Sv.jpg",
+//         "productName": "Epic React Elite",
+//         "brand": "Nike",
+//         "ratings": "4",
+//         "price": "299.99",
+//         "productType": "Shoe",
+//         "description": "Experience elite performance with the Nike Epic React Elite. These cutting-edge shoes are engineered for runners who demand the absolute best. The React foam midsole delivers unparalleled cushioning and responsiveness, ensuring a smooth and comfortable ride mile after mile. The precision-fit upper provides support where you need it most, while the sleek design adds a touch of sophistication. Lace up the Epic React Elite and take your running to new heights. It's not just a shoe; it's a testament to the relentless pursuit of excellence in both technology and design."
+//     },
+//     {
+//         "_id": {
+//             "$oid": "653285c234769ca5b793aec0"
+//         },
+//         "productImg": "https://i.ibb.co/D9Gc1Mb/air-max-270-womens-shoes-Pgb94t.jpg",
+//         "productName": "Zoom Air Precision",
+//         "brand": "Nike",
+//         "ratings": "3",
+//         "price": "159.99",
+//         "productType": "Shoe",
+//         "description": "Dominate the court with the Nike Zoom Air Precision. These basketball shoes are designed for precision and control in every move. The Zoom Air cushioning in the heel provides responsive impact protection, while the durable rubber outsole offers excellent traction on the court. The mid-top design ensures ankle support without sacrificing flexibility, making these shoes perfect for quick cuts and explosive plays. Elevate your basketball game with the Zoom Air Precision – where style meets performance on the hardwood."
+//     },
+//     {
+//         "_id": {
+//             "$oid": "653285c234769ca5b793aec1"
+//         },
+//         "productImg": "https://i.ibb.co/T8Hj58b/air-max-90-mens-shoes-6n3v-KB.jpg",
+//         "productName": "Air Force Street 2023",
+//         "brand": "Nike",
+//         "ratings": "5",
+//         "price": "219.99",
+//         "productType": "Shoe",
+//         "description": "Make a bold statement on the streets with the Nike Air Force Street 2023. These iconic shoes, inspired by the classic Air Force 1, are reimagined for the modern urban explorer. The premium leather upper and bold design elements turn heads wherever you go. The Air-Sole unit in the heel provides cushioning and impact protection, ensuring comfort throughout the day. Whether you're hitting the city sidewalks or hanging out with friends, the Air Force Street 2023 is the perfect combination of street style and legendary Nike heritage."
+//     }
+// ]
+// /// adidas
+// [
+//     {
+//         "_id": {
+//             "$oid": "653285c234769ca5b793aec2"
+//         },
+//         "productImg": "https://i.ibb.co/WWJVvk7/adidas-show-1.jpg",
+//         "productName": "Ultra Boost X",
+//         "brand": "Adidas",
+//         "ratings": "4",
+//         "price": "$179.99",
+//         "productType": "Shoe",
+//         "description": "Step into the future with the Adidas Ultra Boost X. These cutting-edge shoes combine style and performance seamlessly. The breathable mesh upper ensures optimal ventilation, while the Boost cushioning provides maximum comfort and support with every step. The iconic Adidas stripes add a touch of classic flair to these modern kicks. Whether you're hitting the gym or strolling the streets, the Ultra Boost X is your go-to choice for style and comfort. Elevate your shoe game with the latest innovation from Adidas."
+//     },
+//     {
+//         "_id": {
+//             "$oid": "653285c234769ca5b793aec3"
+//         },
+//         "productImg": "https://i.ibb.co/2h2Hpn5/re-1690905212-man-utd-2023-2024-presentation-football-jacket-black.jpg",
+//         "productName": "AdiJacket Pro",
+//         "brand": "Adidas",
+//         "ratings": "5",
+//         "price": "$129.99",
+//         "productType": "Jacket",
+//         "description": "Conquer the elements with the Adidas AdiJacket Pro. This high-performance jacket is designed for those who demand the best in both style and functionality. The water-resistant outer shell keeps you dry in unexpected rain, while the breathable lining ensures comfort in any weather. The adjustable hood and cuffs provide a customizable fit, and the sleek design adds a touch of urban sophistication. Whether you're hitting the trails or navigating the city streets, the AdiJacket Pro is your reliable companion for all your adventures."
+//     },
+//     {
+//         "_id": {
+//             "$oid": "653285c234769ca5b793aec4"
+//         },
+//         "productImg": "https://i.ibb.co/8z79NP8/nike-shoe.jpg",
+//         "productName": "Response Run",
+//         "brand": "Adidas",
+//         "ratings": "3",
+//         "price": "$219.99",
+//         "productType": "Shoe",
+//         "description": "Experience responsive comfort with the Adidas Response Run. These running shoes are crafted for athletes who seek a perfect balance of cushioning and support. The Cloudfoam midsole delivers superior cushioning, absorbing impact and providing a plush feel with every step. The breathable mesh upper ensures proper ventilation, keeping your feet cool during intense workouts. Lace up the Response Run and take your running to new heights. It's not just a shoe; it's a commitment to performance and style, designed for those who push their limits."
+//     },
+//     {
+//         "_id": {
+//             "$oid": "653285c234769ca5b793aec5"
+//         },
+//         "productImg": "https://i.ibb.co/CwVTcF5/HK7649-SF-MAIN-278773-700x700.jpg",
+//         "productName": "Urban Explorer Jacket",
+//         "brand": "Adidas",
+//         "ratings": "4",
+//         "price": "$189.99",
+//         "productType": "Jacket",
+//         "description": "Navigate the city streets in style with the Adidas Urban Explorer Jacket. This trendy jacket is designed for the modern urbanite who values both fashion and functionality. The lightweight and breathable fabric make it ideal for year-round wear, while the adjustable hood and cuffs provide a customizable fit. The sleek design and subtle Adidas logo add a touch of sporty elegance to your streetwear. Whether you're heading to work or exploring the neighborhood, the Urban Explorer Jacket is the perfect choice for those who embrace the urban lifestyle."
+//     }
+// ]
+// /// gucci
+// [
+//     {
+//         "_id": {
+//             "$oid": "653285c234769ca5b793aec6"
+//         },
+//         "productImg": "https://i.ibb.co/wLzhDVT/11.jpg",
+//         "productName": "Gucci Luxe Leather Jacket",
+//         "brand": "Gucci",
+//         "ratings": "4",
+//         "price": "899.99",
+//         "productType": "Jacket",
+//         "description": "Elevate your style with the Gucci Luxe Leather Jacket. Crafted from premium leather, this jacket is a symbol of luxury and sophistication. The impeccable craftsmanship is evident in every detail, from the embossed Gucci logo to the tailored fit. The smooth leather exterior provides a sleek and timeless look, while the quilted lining ensures warmth and comfort. Whether you're stepping into the boardroom or heading out for a night on the town, the Gucci Luxe Leather Jacket makes a bold statement of elegance and refinement."
+//     },
+//     {
+//         "_id": {
+//             "$oid": "653285c234769ca5b793aec7"
+//         },
+//         "productImg": "https://i.ibb.co/Lg5fYCV/Black-Gucci-Pullover-Hoodie-Unisex.webp",
+//         "productName": "Gucci Urban Explorer Jacket",
+//         "brand": "Gucci",
+//         "ratings": "5",
+//         "price": "749.99",
+//         "productType": "Jacket",
+//         "description": "Embrace the urban lifestyle with the Gucci Urban Explorer Jacket. This jacket blends high fashion with streetwear, creating a unique and stylish look. The iconic Gucci logo is subtly featured, adding a touch of luxury to the contemporary design. The lightweight fabric makes it perfect for layering, and the adjustable features provide a customized fit. Whether you're strolling through the city or attending a casual event, the Gucci Urban Explorer Jacket is the epitome of modern elegance and urban chic."
+//     },
+//     {
+//         "_id": {
+//             "$oid": "653285c234769ca5b793aec8"
+//         },
+//         "productImg": "https://i.ibb.co/YD0ccTc/download-1.jpg",
+//         "productName": "Gucci Classic Bomber Jacket",
+//         "brand": "Gucci",
+//         "ratings": "3",
+//         "price": "599.99",
+//         "productType": "Jacket",
+//         "description": "Make a bold statement with the Gucci Classic Bomber Jacket. This iconic piece combines the timeless appeal of a bomber jacket with the luxury and style that Gucci is known for. Crafted from high-quality materials, the jacket features the signature Gucci stripe detailing and logo embellishments. The ribbed cuffs and hem add a classic touch, while the relaxed fit ensures comfort and ease of movement. Whether you're heading to a casual outing or a social event, the Gucci Classic Bomber Jacket is a must-have for those who appreciate fashion with a touch of extravagance."
+//     },
+//     {
+//         "_id": {
+//             "$oid": "653285c234769ca5b793aec9"
+//         },
+//         "productImg": "https://i.ibb.co/wgP6t8w/download.jpg",
+//         "productName": "Gucci Velvet Embroidered Jacket",
+//         "brand": "Gucci",
+//         "ratings": "4",
+//         "price": "899.99",
+//         "productType": "Jacket",
+//         "description": "Indulge in luxury with the Gucci Velvet Embroidered Jacket. This exquisite piece showcases Gucci's commitment to opulence and craftsmanship. The jacket is crafted from sumptuous velvet, adorned with intricate embroidery that reflects the brand's iconic motifs. The tailored fit and rich texture make it a standout choice for special occasions and evening events. Elevate your wardrobe with this statement piece that effortlessly combines sophistication and glamour. The Gucci Velvet Embroidered Jacket is a timeless investment for those who appreciate the finer things in life."
+//     }
+// ]
+// /// zara 
+// [
+//     {
+//         "_id": {
+//             "$oid": "653285c234769ca5b793aeca"
+//         },
+//         "productImg": "https://i.ibb.co/HK5qYmF/iwtnk-512.webp",
+//         "productName": "Zara Slim Fit Jeans",
+//         "brand": "Zara",
+//         "ratings": "4",
+//         "price": "$49.99",
+//         "productType": "Jeans",
+//         "description": "Upgrade your casual style with the Zara Slim Fit Jeans. These jeans offer a modern and tailored fit that complements any wardrobe. The high-quality denim provides both comfort and durability, making them perfect for everyday wear. The versatile design allows you to pair them with a variety of tops for different looks. Whether you're running errands or grabbing coffee with friends, the Zara Slim Fit Jeans are a stylish choice that effortlessly combines comfort and fashion."
+//     },
+//     {
+//         "_id": {
+//             "$oid": "653285c234769ca5b793aecb"
+//         },
+//         "productImg": "https://i.ibb.co/Rb0fRqL/7545521250-6-1-1.jpg",
+//         "productName": "Zara Classic White Shirt",
+//         "brand": "Zara",
+//         "ratings": "5",
+//         "price": "$29.99",
+//         "productType": "Shirt",
+//         "description": "Elevate your wardrobe with the Zara Classic White Shirt. This timeless piece is a must-have for any fashion-forward individual. The shirt features a crisp and clean design, making it suitable for both casual and formal occasions. The high-quality cotton fabric provides a comfortable and breathable feel. Whether you're heading to the office or going out for a night on the town, the Zara Classic White Shirt is a versatile and essential addition to your collection."
+//     },
+//     {
+//         "_id": {
+//             "$oid": "653285c234769ca5b793aecc"
+//         },
+//         "productImg": "https://i.ibb.co/f1sqPns/Pants-Female-Women-s-Jeans-Large-Size-Boyfriend-Jean-Women-Jeans-y2k-Pants-High-Waist-Mom.jpg",
+//         "productName": "Zara Skinny Jeans",
+//         "brand": "Zara",
+//         "ratings": "3",
+//         "price": "$39.99",
+//         "productType": "Jeans",
+//         "description": "Make a statement with the Zara Skinny Jeans. These jeans are designed to provide a sleek and modern look, perfect for those who appreciate a contemporary style. The stretch denim ensures a comfortable fit while maintaining a slim silhouette. Whether you're going for a casual weekend look or dressing up for a night out, the Zara Skinny Jeans are a versatile choice that combines fashion and comfort effortlessly."
+//     },
+//     {
+//         "_id": {
+//             "$oid": "653285c234769ca5b793aecd"
+//         },
+//         "productImg": "https://i.ibb.co/dMJT9sK/7545521401-6-1-1.jpg",
+//         "productName": "Zara Striped Oxford Shirt",
+//         "brand": "Zara",
+//         "ratings": "4",
+//         "price": "$34.99",
+//         "productType": "Shirt",
+//         "description": "Add a touch of sophistication to your wardrobe with the Zara Striped Oxford Shirt. This shirt features a classic striped pattern that exudes timeless charm. The Oxford cotton fabric provides a crisp and polished look, making it suitable for various occasions. Whether you're dressing up for work or going for a smart-casual ensemble, the Zara Striped Oxford Shirt is a versatile and stylish choice that allows you to express your personal style with ease."
+//     }
+// ]
+
+// // h&m
+
+
+
+
+
+
+
+
+// [
+//     {
+//       "_id": {"$oid": "653285c234769ca5b793aece"},
+//       "productImg": "https://i.ibb.co/NCwg7j7/hmgoepprod.jpg",
+//       "productName": "H&M Slim Fit Jeans",
+//       "brand": "H&M",
+//       "ratings": "4",
+//       "price": "39.99",
+//       "productType": "Jeans",
+//       "description": "Revamp your denim collection with the H&M Slim Fit Jeans. These jeans offer a contemporary and streamlined look that suits various occasions. The high-quality denim fabric ensures both comfort and durability, making them a reliable choice for everyday wear. The versatile design allows you to pair them with a range of tops for different styles. Whether you're heading to a casual outing or enjoying a night out, the H&M Slim Fit Jeans are a stylish and practical addition to your wardrobe."
+//     },
+//     {
+//       "_id": {"$oid": "653285c234769ca5b793aecf"},
+//       "productImg": "https://i.ibb.co/KFtwmBH/shirt-3.jpg",
+//       "productName": "H&M Classic White Shirt",
+//       "brand": "H&M",
+//       "ratings": "5",
+//       "price": "24.99",
+//       "productType": "Shirt",
+//       "description": "Elevate your style with the H&M Classic White Shirt. This timeless shirt is a versatile addition to your wardrobe, suitable for both casual and formal occasions. The shirt features a clean and crisp design, perfect for creating a polished and sophisticated look. The high-quality cotton fabric ensures a comfortable fit, making it an ideal choice for all-day wear. Whether you're dressing up for the office or going for a smart-casual ensemble, the H&M Classic White Shirt is a wardrobe staple that combines style and comfort effortlessly."
+//     },
+//     {
+//       "_id": {"$oid": "653285c234769ca5b793aed0"},
+//       "productImg": "https://i.ibb.co/XShQQFR/m-60df73a1446e59e8e03f6b65.jpg",
+//       "productName": "H&M Skinny Jeans",
+//       "brand": "H&M",
+//       "ratings": "3",
+//       "price": "34.99",
+//       "productType": "Jeans",
+//       "description": "Make a fashion statement with the H&M Skinny Jeans. These jeans are designed to provide a sleek and modern look, catering to those who appreciate contemporary styles. The stretch denim ensures a comfortable and flattering fit, while maintaining a slim silhouette. Whether you're going for a casual weekend vibe or dressing up for a night out, the H&M Skinny Jeans are a versatile and trendy choice that effortlessly combines fashion and comfort."
+//     },
+//     {
+//       "_id": {"$oid": "653285c234769ca5b793aed1"},
+//       "productImg": "https://i.ibb.co/DYXHBTR/shirt-7.jpg",
+//       "productName": "H&M Striped Button-Up Shirt",
+//       "brand": "H&M",
+//       "ratings": "4",
+//       "price": "29.99",
+//       "productType": "Shirt",
+//       "description": "Add a touch of sophistication to your wardrobe with the H&M Striped Button-Up Shirt. This shirt features a classic striped pattern that adds a timeless charm to your look. The button-up design allows for easy styling, whether you're dressing up for work or going for a smart-casual ensemble. The high-quality fabric ensures a comfortable fit, making the H&M Striped Button-Up Shirt a versatile and stylish choice for various occasions."
+//     }
+//   ]
+  

@@ -1,5 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 
+import Swal from "sweetalert2";
+
 const AddProduct = () => {
     const handleAddProduct = event => {
         event.preventDefault();
@@ -15,24 +17,29 @@ const AddProduct = () => {
         console.log(addNewProduct)
 
         // send data to the server
-        fetch('http://localhost:5000/brand-products', {
+        fetch('https://a-10-sell-shop-server.vercel.app/brand-products', {
             method: 'POST',
-            headers: { 
+            headers: {
                 'content-type': 'application/json'
             },
             body: JSON.stringify(addNewProduct)
         })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
-        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                Swal.fire(
+                    'Good job!',
+                    'A new product added',
+                    'success'
+                )
+            })
     }
 
 
     return (
-        <div>
-            <section className="bg-white dark:bg-gray-900">
-                <div className="py-8 px-4 mx-auto max-w-2xl lg:py-16">
+        <div className="p-[100px] bg-slate-50">
+            <section className=" dark:bg-gray-900 ">
+                <div className="py-8 px-8 mx-auto max-w-2xl lg:py-16 shadow-2xl">
                     <h2 className="mb-4 text-xl font-bold text-gray-900 dark:text-white">Add a new product</h2>
                     <form onSubmit={handleAddProduct}>
                         <div className="grid gap-4 sm:grid-cols-2 sm:gap-6">
@@ -95,7 +102,7 @@ const AddProduct = () => {
                                 <textarea name="description" id="description" rows="8" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Your description here"></textarea>
                             </div>
                         </div>
-                        <button type="submit" className="inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-[#2b87ff] rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800">
+                        <button type="submit" className="btn mt-5 text-white bg-[#2b87ff] rounded-lg hover:bg-transparent hover:border-[#2b87ff] hover:text-[#2b87ff]">
                             Add product
                         </button>
                     </form>

@@ -8,7 +8,7 @@ const googleAuthProvider = new GoogleAuthProvider()
 
 const Provider = ({ children }) => {
     // this state is for storing all the datas from data.json
-    const [servicesData, setServiceData] = useState([])
+    // const [servicesData, setServiceData] = useState([])
     // this state is for storing user details or data
     const [user, setUser] = useState([])
     // this state is for loading
@@ -64,12 +64,6 @@ const Provider = ({ children }) => {
     // this is for google sign in users
     const signInGoogle = () => {
         setLoading(true);
-        // setUser({
-        //     uid: user.uid,
-        //     email: user.email,
-        //     displayName: user.displayName,
-        //     photoURL: user.photoURL,
-        // });
         return signInWithPopup(auth, googleAuthProvider)
     }
 
@@ -78,22 +72,9 @@ const Provider = ({ children }) => {
         setLoading(true);
         return signOut(auth);
     }
-
-    // observe auth state change
-    // useEffect(() => {
-    //     const unSubscribe = onAuthStateChanged(auth, currentUser => {
-    //         console.log("current value of the current user", currentUser);
-    //         setUser(currentUser)
-    //     });
-    //     return () => {
-    //         unSubscribe();
-    //     }
-    // }, [])
-
-
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, currentUser => {
-            console.log("current value of the current user", currentUser);
+            // console.log("current value of the current user", currentUser);
             setUser(currentUser ? {
                 uid: currentUser.uid,
                 email: currentUser.email,
@@ -108,19 +89,10 @@ const Provider = ({ children }) => {
             unSubscribe();
         }
     }, []);
-
-
-    // useEffect for collecting data from json file and store them in the previous state "servicesData"
-    useEffect(() => {
-        fetch('/data.json')
-            .then(res => res.json())
-            .then(data => setServiceData(data))
-    }, [])
-
     // this const is for keeping all the states which we want to use allover the project components from anywhere else
     const providerInfo = {
         user,
-        servicesData,
+        // servicesData,
         createUser,
         signInUser,
         signInGoogle,

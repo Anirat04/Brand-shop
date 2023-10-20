@@ -38,26 +38,12 @@ const Register = () => {
                 setRegError(error.message);
                 })
         }
-        // createUser(email, password, displayName, photoURL)
-        //     .then(result => {
-        //         console.log(result.user)
-        //         e.target.reset();
-        //         Navigate("/")
-        //         Swal.fire(
-        //             'Registration completed successfully by Email',
-        //             "Enjoy our services don't forget to feedback",
-        //             'success'
-        //         )
-        //     })
-        //     .catch(error => {
-        //         console.log("error: ", error);
-        //     })
 
     }
 
     return (
         <div className="min-h-screen bg-base-200">
-            <div className="hero pt-[150px]">
+            <div className="hero pt-[80px] pb-[100px]">
                 <div className="hero-content flex-col">
                     <div className="text-center lg:text-left">
                         <h1 className="text-5xl font-bold">Register now!</h1>
@@ -94,7 +80,7 @@ const Register = () => {
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary border-black font-bold bg-black text-white hover:bg-base-300 hover:border-black hover:text-black">Register</button>
                             </div>
-                            <p>Already have an account? Please <Link to="/login"><button className="btn-link font-bold uppercase">Login</button></Link></p>
+                            <p>Already have an account? Please <Link to="/login"><button className="btn-link text-[#2b87ff] font-bold uppercase">Login</button></Link></p>
                         </form>
                     </div>
                 </div>

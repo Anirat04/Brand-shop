@@ -12,13 +12,8 @@ const navLinks = <>
 
 const Navbar = () => {
     const { user, logOut, loading } = useContext(ProviderContext)
-    console.log(user)
+    // console.log(user)
     // const location = useLocation()
-
-
-    // const navbarStyle = {
-    //     color: location.pathname !== '/' ? '#000000' : '#ffffff',
-    // };
 
     // this event handler is to log out users from the server
     const handleLogOut = () => {

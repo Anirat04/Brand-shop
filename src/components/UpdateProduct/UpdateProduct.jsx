@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const UpdateProduct = () => {
     const updateProduct = useLoaderData();
@@ -19,7 +20,7 @@ const UpdateProduct = () => {
         console.log(updatedProduct)
 
         // send data to the server
-        fetch(`http://localhost:5000/brand-products/${_id}`, {
+        fetch(`https://a-10-sell-shop-server.vercel.app/brand-products/${_id}`, {
             method: 'PUT',
             headers: { 
                 'content-type': 'application/json'
@@ -29,18 +30,23 @@ const UpdateProduct = () => {
         .then(res => res.json())
         .then(data => {
             console.log(data);
+            Swal.fire(
+                'Good job!',
+                'Product details updated successfully',
+                'success'
+              )
         })
     }
     return (
-        <div>
+        <div className="pb-[100px] bg-slate-50">
             <div className="common-heading text-center py-[60px]">
                 <h1 className="text-[40px] font-bold text-[#2b87ff]">Update your Product</h1>
                 <h3 className="text-[18px] italic text-black">Get authentic brand products</h3>
             </div>
             <div>
-                <section className="bg-white dark:bg-gray-900">
-                    <div className="py-8 px-4 mx-auto max-w-2xl lg:py-16">
-                        <h2 className="mb-4 text-xl font-bold text-gray-900 dark:text-white">Add a new product</h2>
+                <section className=" dark:bg-gray-900">
+                    <div className="py-8 px-8 mx-auto max-w-2xl lg:py-16 bg-white shadow-2xl">
+                        <h2 className="mb-4 text-xl font-bold text-gray-900 dark:text-white">Update your existing product</h2>
                         <form onSubmit={handleUpdateProduct}>
                             <div className="grid gap-4 sm:grid-cols-2 sm:gap-6">
                                 {/* image url input */}
