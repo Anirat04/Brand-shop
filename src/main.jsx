@@ -16,6 +16,7 @@ import MyCart from './components/MyCart/MyCart.jsx';
 import Login from './components/Login/Login.jsx';
 import Register from './components/Register/Register.jsx';
 import Provider from './provider/provider.jsx';
+import PrivateRoute from './PrivateRoute/PrivateRoute.jsx';
 
 const router = createBrowserRouter([
   {
@@ -28,7 +29,8 @@ const router = createBrowserRouter([
       },
       {
         path: "/addProduct",
-        element: <AddProduct></AddProduct>
+        element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>
+        // element: <AddProduct></AddProduct>
       },
       {
         path: "/brand-products/:brand",
@@ -37,17 +39,20 @@ const router = createBrowserRouter([
       },
       {
         path: "/brand-products/:brand/product-details/:id",
-        element: <Details></Details>,
+        element: <PrivateRoute><Details></Details></PrivateRoute>,
+        // element: <Details></Details>,
         loader: ({ params }) => fetch(`http://localhost:5000/brand-products/${params.id}`)
       },
       {
         path: "/brand-products/:brand/update-product/:id",
-        element: <UpdateProduct></UpdateProduct>,
+        element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
+        // element: <UpdateProduct></UpdateProduct>,
         loader: ({ params }) => fetch(`http://localhost:5000/brand-products/${params.id}`)
       },
       {
         path: "/mycarts",
-        element: <MyCart></MyCart>,
+        element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
+        // element: <MyCart></MyCart>,
         loader: () => fetch(`http://localhost:5000/carts`)
       },
       {

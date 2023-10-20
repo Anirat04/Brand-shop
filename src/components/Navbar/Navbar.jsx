@@ -1,5 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import './Navbar.css';
+import { useContext } from "react";
+import { ProviderContext } from "../../provider/provider";
 
 const navLinks = <>
     <NavLink className="navHoverClass" to="/">Home</NavLink>
@@ -9,6 +11,23 @@ const navLinks = <>
 
 
 const Navbar = () => {
+    const { user, logOut, loading } = useContext(ProviderContext)
+    console.log(user)
+    // const location = useLocation()
+
+
+    // const navbarStyle = {
+    //     color: location.pathname !== '/' ? '#000000' : '#ffffff',
+    // };
+
+    // this event handler is to log out users from the server
+    const handleLogOut = () => {
+        logOut()
+            .then(() => {
+                console.log('user logged out')
+            })
+            .catch(error => console.log('error logging out', error))
+    }
     return (
         <div>
             <div className="navbar bg-base-100 max-w-[1320px] mx-auto py-[20px]">
@@ -32,9 +51,28 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link to="/login">
-                        <a className="btn">Button</a>
-                    </Link>
+                    <div className="ml-8">
+                        {
+                            loading ? <>
+                            </>
+                                : <>
+                                    {
+                                        user ? <>
+                                            <button
+                                                className="btn text-white bg-[#2b87ff] rounded-lg hover:bg-transparent hover:border-[#2b87ff] hover:text-[#2b87ff]"
+                                                onClick={handleLogOut}
+                                            >
+                                                Logout
+                                            </button>
+                                        </>
+                                            : <Link to="/login">
+                                                <button className="btn text-white bg-[#2b87ff] rounded-lg hover:bg-transparent hover:border-[#2b87ff] hover:text-[#2b87ff]">Login</button>
+                                            </Link>
+                                    }
+                                </>
+                        }
+
+                    </div>
                 </div>
             </div>
         </div>
