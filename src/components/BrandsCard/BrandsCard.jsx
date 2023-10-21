@@ -10,14 +10,6 @@ const BrandsCard = () => {
             .then(res => res.json())
             .then(data => setBrandsData(data))
     }, [])
-    // console.log(brandsData)
-    // const getMap = brandsData?.map(brand => console.log(brand))
-    // console.log(getMap)
-
-    // const gradientBackground = {
-    //     background: 'rgb(103,98,186)',
-    //     backgroundImage: 'linear-gradient(90deg, rgba(103,98,186,0.3) 0%, rgba(88,156,245,0.3029586834733894) 46%, rgba(34,194,227,0.3) 100%)',
-    // };
 
     return (
         <div className="bg-slate-100 mb-[100px] pb-[100px]">
