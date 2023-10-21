@@ -1,7 +1,7 @@
 # Site- eTrade (Assignment-10-BrandShop)
 ## Live link: https://assignment-10-sell-shop.firebaseapp.com/
 ## This is E-commerce fashion website, here are some of it's features :
-# Bonus feature: Emplement the dark mode toggle button in the navbar
+### Bonus feature: Emplement the dark mode toggle button in the navbar
 - This is a full stack website. It is fully dynamic.
 - In this website I used MongoDB as a backend database.
 - User can Add Product to the cart and watch all of them in MyCart route
