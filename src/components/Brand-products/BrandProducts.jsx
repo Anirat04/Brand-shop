@@ -5,6 +5,7 @@ import { Link, useLoaderData, useParams } from "react-router-dom";
 const BrandProducts = () => {
 
     const [brandData, setBrandsData] = useState([]);
+    const [adsBannerData, setAdsBannerData] = useState([]);
     const takeBrandData = useLoaderData();
     const currentBrand = useParams();
 
@@ -15,26 +16,39 @@ const BrandProducts = () => {
     }, [takeBrandData]); // Add takeBrandData as a dependency
     const brandCards = brandData?.filter(brands => brands.brand.toLowerCase() == currentBrand.brand.toLowerCase())
 
+    useEffect(() => {
+        fetch('https://a-10-sell-shop-server.vercel.app/ads')
+            .then(res => res.json())
+            .then(data => setAdsBannerData(data))
+    }, [])
+    const adsImage = adsBannerData?.find(adsImg => adsImg.brand.toLowerCase() == currentBrand.brand.toLowerCase())
+    console.log(adsImage)
+    console.log(adsImage?.adsOne)
+    // const getOneData = adsImage.map(adsImg => adsImg)
+    // const getIndex = adsImage[0]
+    // const getOneObj = 
+
     const checkLength = brandCards.length;
     return (
         <>
             <div className="carousel w-full max-h-[600px]">
                 <div id="slide1" className="carousel-item relative w-full">
-                    <img src="https://i.ibb.co/sb0CjGL/5952228-1877.jpg" className="w-full" />
+                    <img src={adsImage?.adsOne} className="w-full" />
+                    {/* <img src='https://i.ibb.co/FJwFkkh/adidas-1.jpg' className="w-full" /> */}
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                         <a href="#slide3" className="btn btn-circle">❮</a>
                         <a href="#slide2" className="btn btn-circle">❯</a>
                     </div>
                 </div>
                 <div id="slide2" className="carousel-item relative w-full">
-                    <img src="https://i.ibb.co/KDHskxJ/nike-shoe-adver.jpg" className="w-full" />
+                    <img src={adsImage?.adsTwo} className="w-full" />
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                         <a href="#slide1" className="btn btn-circle">❮</a>
                         <a href="#slide3" className="btn btn-circle">❯</a>
                     </div>
                 </div>
                 <div id="slide3" className="carousel-item relative w-full">
-                    <img src="https://i.ibb.co/Jd2Tj3L/original-68985d7f6e10b26fe7a92f9e48c494bf.jpg" className="w-full" />
+                    <img src={adsImage?.adsThree} className="w-full" />
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                         <a href="#slide2" className="btn btn-circle">❮</a>
                         <a href="#slide1" className="btn btn-circle">❯</a>
