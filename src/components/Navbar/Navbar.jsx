@@ -68,6 +68,27 @@ const Navbar = () => {
                         }
 
                     </div>
+                    <div className="ml-[20px] border border-black rounded-full">
+                        {
+                            user ? <div className="bg-white flex flex-row-reverse items-center gap-3 rounded-full">
+                                <Link className="border border-black rounded-full bg-base-300">
+                                    <img className="max-w-[45px] min-h-[45px] rounded-full" src={user.photoURL ? user.photoURL : 'https://i.ibb.co/N7JQLnY/user-default-image.jpg'} alt="" />
+                                </Link>
+                                <p className="pl-[15px] font-bold">{user.displayName ? user.displayName : "userName_null"}</p>
+                            </div>
+                                :
+                                <div className=" bg-base-300 flex flex-row-reverse items-center gap-5 rounded-full">
+                                    <Link className="border border-black rounded-full bg-base-300">
+                                        <img className="max-w-[45px] min-h-[45px] rounded-full" src='https://i.ibb.co/N7JQLnY/user-default-image.jpg' alt="" />
+                                    </Link>
+                                    <p className="pl-[20px] font-bold">No User</p>
+                                </div>
+                            // <Link>
+                            //     {/* <img className="max-w-[40px] rounded-full" src="https://i.ibb.co/N7JQLnY/user-default-image.jpg" alt="" /> */}
+                            // </Link>
+                        }
+                        {/* <img className="max-w-[40px] rounded-full" src="https://i.ibb.co/N7JQLnY/user-default-image.jpg" alt="" /> */}
+                    </div>
                 </div>
             </div>
         </div>

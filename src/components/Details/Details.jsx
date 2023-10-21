@@ -20,10 +20,18 @@ const Details = () => {
             .then(data => {
                 console.log(data);
                 Swal.fire(
-                    'Good job!',
+                    'Enjoy Shoping!',
                     'Product added to the cart!',
                     'success'
                   )
+            })
+            .catch((err) => {
+                console.log(err);
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'You have already added this product to the cart!',
+                  })
             })
     }
 
