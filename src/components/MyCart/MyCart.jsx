@@ -1,12 +1,14 @@
 /* eslint-disable react/no-unescaped-entities */
+import { useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const MyCart = () => {
     const allCartsInfo = useLoaderData()
+    const [updateCarts, setUpdateCarts] = useState(allCartsInfo)
     // const { _id, productImg, productName, brand, ratings, price, productType, description } = allCartsInfo;
     // console.log(allCartsInfo)
-    const productsPrice = allCartsInfo;
+    const productsPrice = updateCarts;
 
     // Calculate the total price
     const totalPrice = productsPrice.reduce((sum, product) => sum + (parseFloat(product.price) || 0), 0);
@@ -33,11 +35,13 @@ const MyCart = () => {
                     .then(data => {
                         console.log(data)
                         if (data.deletedCount > 0) {
-                            Swal.fire(
-                                'Deleted!',
-                                'Your file has been deleted.',
-                                'success'
-                            )
+                            // Swal.fire(
+                            //     'Deleted!',
+                            //     'Your file has been deleted.',
+                            //     'success'
+                            // )
+                            const remaining = updateCarts.filter(carts => carts._id !== _id)
+                            setUpdateCarts(remaining);
                         }
                     })
             }
@@ -48,17 +52,17 @@ const MyCart = () => {
             <div className="pb-[100px]">
                 <div className="common-heading text-center py-[60px]">
                     <h1 className="text-[40px] font-bold text-[#2b87ff]">Your Cart</h1>
-                    <h3 className="text-[18px] italic text-black">Let's by Happiness</h3>
+                    <h3 className="text-[18px] italic text-black">Let's buy Happiness</h3>
                 </div>
                 <div className=" flex justify-center mx-auto">
                     <div className="flex shadow-2xl flex-col justify-items-center max-w-3xl p-6 space-y-4 sm:p-10 dark:bg-gray-900 dark:text-gray-100 bg-white">
                         <div className="flex justify-between">
                             <h2 className="text-xl font-semibold">Your cart</h2>
-                            <h2 className="text-xl font-semibold">Items: {allCartsInfo.length}</h2>
+                            <h2 className="text-xl font-semibold">Items: {updateCarts.length}</h2>
                         </div>
                         <ul className="flex flex-col divide-y divide-gray-700">
                             {
-                                allCartsInfo?.map(cart => (
+                                updateCarts?.map(cart => (
                                     <li key={cart._id} className="flex flex-col py-6 sm:flex-row sm:justify-between">
                                         <div className="flex w-full space-x-2 sm:space-x-4">
                                             <img className="flex-shrink-0 object-cover w-20 h-20 dark:border-transparent rounded outline-none sm:w-32 sm:h-32 dark:bg-gray-500" src={cart.productImg} alt="Polaroid camera" />

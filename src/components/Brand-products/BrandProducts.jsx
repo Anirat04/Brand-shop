@@ -22,11 +22,8 @@ const BrandProducts = () => {
             .then(data => setAdsBannerData(data))
     }, [])
     const adsImage = adsBannerData?.find(adsImg => adsImg.brand.toLowerCase() == currentBrand.brand.toLowerCase())
-    console.log(adsImage)
-    console.log(adsImage?.adsOne)
-    // const getOneData = adsImage.map(adsImg => adsImg)
-    // const getIndex = adsImage[0]
-    // const getOneObj = 
+    // console.log(adsImage)
+    // console.log(adsImage?.adsOne)
 
     const checkLength = brandCards.length;
     return (
@@ -34,7 +31,6 @@ const BrandProducts = () => {
             <div className="carousel w-full max-h-[600px]">
                 <div id="slide1" className="carousel-item relative w-full">
                     <img src={adsImage?.adsOne} className="w-full" />
-                    {/* <img src='https://i.ibb.co/FJwFkkh/adidas-1.jpg' className="w-full" /> */}
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                         <a href="#slide3" className="btn btn-circle">❮</a>
                         <a href="#slide2" className="btn btn-circle">❯</a>
